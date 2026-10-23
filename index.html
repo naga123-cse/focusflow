@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FocusFlow helps you plan tasks, track progress, and build better focus habits.">
+<title>FocusFlow — Plan. Study. Achieve.</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <a class="brand" href="#">✦ Focus<span>Flow</span></a>
+  <nav><button class="nav active" data-view="all">▦ <span>Dashboard</span></button><button class="nav" data-view="all">☑ <span>My Tasks</span></button><button class="nav" data-view="stats">▥ <span>Stats</span></button></nav>
+  <div class="side-note"><b>✓</b><p><strong>Stay focused</strong><br>Build your future</p></div>
+</aside>
+<main>
+<header class="top"><div><p class="eyebrow">YOUR PERSONAL WORKSPACE</p><h1>Stay focused. Achieve more <span>✦</span></h1><p class="muted">Small steps every day lead to big results.</p></div><div class="top-right"><input id="search" placeholder="Search tasks..." aria-label="Search tasks"><div class="avatar">F</div></div></header>
+<section class="stats">
+ <article class="stat blue"><small>Total tasks</small><strong id="total">0</strong><span>All your tasks</span></article>
+ <article class="stat green"><small>Completed</small><strong id="done">0</strong><span>One step at a time</span></article>
+ <article class="stat purple"><small>In progress</small><strong id="progress">0</strong><span>Keep going</span></article>
+ <article class="stat pink"><small>Completion</small><strong id="rate">0%</strong><span>Progress so far</span></article>
+</section>
+<div class="columns">
+<section class="panel">
+ <div class="heading"><div><p class="eyebrow">MAKE IT HAPPEN</p><h2>Your tasks</h2></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="todo">To do</button><button class="filter" data-filter="progress">In progress</button><button class="filter" data-filter="done">Completed</button></div></div>
+ <div id="task-list"></div><div id="empty" class="empty" hidden><h3>No tasks found</h3><p>Add a task or change your filter.</p></div>
+ <div class="chart-panel"><div class="heading"><div><p class="eyebrow">YOUR MOMENTUM</p><h2>Progress overview</h2></div></div><div id="bars" class="bars"></div><p class="muted tiny">Bars show the current status of your tasks.</p></div>
+</section>
+<aside class="right">
+<section class="panel">
+ <div class="heading"><div><p class="eyebrow">START WITH ONE THING</p><h2 id="form-heading">Add a new task</h2></div><span class="plus">＋</span></div>
+ <form id="task-form">
+ <label for="title">Task title</label><input id="title" maxlength="100" required placeholder="e.g. Finish project report">
+ <label for="category">Category</label><select id="category"><option>Study</option><option>Work</option><option>Personal</option><option>Health</option><option>Project</option></select>
+ <div class="form-row"><div><label for="due">Due date</label><input id="due" type="date"></div><div><label for="priority">Priority</label><select id="priority"><option>Medium</option><option>High</option><option>Low</option></select></div></div>
+ <label for="status">Status</label><select id="status"><option value="todo">To do</option><option value="progress">In progress</option><option value="done">Completed</option></select>
+ <div class="buttons"><button class="primary" id="submit" type="submit">＋ Add task</button><button class="secondary" id="cancel" type="button" hidden>Cancel</button></div><p class="tiny muted center">Tasks are saved in this browser.</p>
+ </form>
+</section>
+<section class="quote"><p class="eyebrow">A LITTLE REMINDER</p><h2>Discipline today builds the freedom of tomorrow.</h2><div class="hills"></div></section>
+<section class="panel tips"><h2>Quick tips</h2><p>✓ Break big tasks into smaller steps</p><p>✓ Focus on one priority at a time</p><p>✓ Celebrate progress, not perfection</p></section>
+</aside>
+</div>
+<footer><b>FocusFlow</b> · Plan · Study · Achieve <span>Made to help you focus ✦</span></footer>
+</main>
+</div><div id="toast" role="status"></div><script src="app.js"></script>
+</body></html>
